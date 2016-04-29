@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page layout="1column">
+    <head>
+        <title>Store Listing</title>
+        <css src="mage/gallery/gallery.css"/>
+        <css src="Yereone_StoreListing::css/source/styles.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Yereone\StoreListing\Block\Listing" name="store.listing" template="Yereone_StoreListing::listing.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
