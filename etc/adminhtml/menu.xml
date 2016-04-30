@@ -1,0 +1,6 @@
+<config>
+    <menu>
+        <add id="Yereone_StoreListing::listing" title="Store Listing" module="Yereone_StoreListing" sortOrder="1" parent="Magento_Backend::other_settings"
+             resource="Yereone_StoreListing::listing" action="storelisting"/>
+    </menu>
+</config>

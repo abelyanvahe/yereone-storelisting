@@ -3,7 +3,7 @@
     <head>
         <title>Store Listing</title>
         <css src="mage/gallery/gallery.css"/>
-        <css src="Yereone_StoreListing::css/source/styles.css"/>
+        <css src="Yereone_StoreListing::css/source/storelisting.css"/>
     </head>
     <body>
         <referenceContainer name="content">

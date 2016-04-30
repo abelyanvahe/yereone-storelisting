@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <body>
+        <referenceContainer name="content">
+            <uiComponent name="yereone_storelisting_listing"/>
+        </referenceContainer>
+    </body>
+</page>
