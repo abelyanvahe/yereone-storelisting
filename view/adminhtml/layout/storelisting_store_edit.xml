@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <body>
+        <referenceContainer name="content">
+            <block class="Yereone\StoreListing\Block\Adminhtml\Store\Edit" name="store.edit.form"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <system>
+        <section id="storelisting" translate="label" showInWebsite="1" showInStore="1" showInDefault="1" type="text">
+            <label>Store Listing</label>
+            <tab>sales</tab>
+            <resource>Yereone_StoreListing::config</resource>
+            <group id="general" translate="label" showInWebsite="1" showInStore="1" showInDefault="1" type="text">
+                <label>General</label>
+                <field id="title" translate="label" showInWebsite="1" showInStore="1" showInDefault="1" type="text" sortOrder="1">
+                    <label>Title</label>
+                </field>
+                <field id="displayFooterLink" translate="label" showInWebsite="1" showInStore="1" showInDefault="1" type="select" sortOrder="2">
+                    <label>Display Footer Link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section> 
+    </system>
+</config>

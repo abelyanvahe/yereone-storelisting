@@ -6,6 +6,12 @@
 				<resource id="Magento_Backend::stores">
 					<resource id="Yereone_StoreListing::listing" title="Store Listing">
 					</resource>
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Backend::config">
+                            <resource id="Yereone_StoreListing::config" title="Store Listing Config">
+                            </resource>
+                        </resource>
+                    </resource>
 				</resource>
 			</resource>
 		</resources>

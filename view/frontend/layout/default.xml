@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <body>
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Html\Link" name="storelisting.link" ifconfig="storelisting/general/displayFooterLink">
+                <arguments>
+                    <argument name="label" translate="true" xsi:type="string">Store Listing</argument>
+                    <argument name="path" xsi:type="string">storelisting</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

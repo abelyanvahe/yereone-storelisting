@@ -380,12 +380,12 @@
                 </item>
             </argument>
         </column>
-        <actionsColumn name="actions" class="Ashsmith\Blog\Ui\Component\Listing\Column\PostActions">
+        <actionsColumn name="actions" class="Yereone\StoreListing\Ui\Component\Listing\Column\StoreActions">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="resizeEnabled" xsi:type="boolean">false</item>
                     <item name="resizeDefaultWidth" xsi:type="string">107</item>
-                    <item name="indexField" xsi:type="string">post_id</item>
+                    <item name="indexField" xsi:type="string">id</item>
                 </item>
             </argument>
         </actionsColumn>

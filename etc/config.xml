@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <default>
+        <storelisting>
+            <general>
+                <title>Store Listing</title>
+                <displayFooterLink>1</displayFooterLink>
+            </general>
+        </storelisting>
+    </default>
+</config>

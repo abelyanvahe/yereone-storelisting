@@ -3,13 +3,14 @@
 <div class="storelist-stores">
 <?php foreach ($stores as $store): ?>
 <div class="store">
-    <h3><?php echo $store->getName();?></h3>
+    <h2><?php echo $store->getName();?></h2>
     <div class="gallery gallery-<?php echo $store->getId();?>"></div>
     <div class="store-info">
         <p><?php echo $store->getDescription();?></p>
         <p><?php echo __("Store Hours:");?></p>
         <p><?php echo $store->getHours();?></p>
         <p><a href="tel:<?php echo $store->getTelephone();?>"><?php echo $store->getTelephone();?></a></p>
+        <p><?php echo $store->getMapEmbeded();?></p>
     </div>
     <script type="text/x-magento-init">
          {
@@ -22,9 +23,9 @@
                         "navtype" : "thumbs",
                         "navdir" : "vertical",
                         "height" : 400,
-                        "width" : 300,
+                        "width" : "100%",
                         "maxheight" : 400,
-                        "maxwidth" : 300
+                        "maxwidth" : "100%"
                      },
                     "fullscreen" : {
                         "nav" : "thumbs"

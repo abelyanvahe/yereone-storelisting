@@ -48,6 +48,12 @@ class InstallSchema implements InstallSchemaInterface
                         [],
                         "Store Telephone"
                 )
+                ->addColumn("map_embeded",
+                        \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                        65556,
+                        [],
+                        "Store Map Embded"
+                        )
                 ->addColumn("social",
                         \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                         65556,
@@ -61,7 +67,6 @@ class InstallSchema implements InstallSchemaInterface
                         "Store Images"
                 );
         $setup->getConnection()->createTable($table);
-         
         $setup->endSetup();
     }
 }
