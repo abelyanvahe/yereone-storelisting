@@ -26,31 +26,20 @@ class Form extends Generic
                 ['legend' => __('General Information'), 'class' => 'fieldset-wide']
                 );
         
-//         if ($model->getPostId()) {
-//             $fieldset->addField('post_id', 'hidden', ['name' => 'post_id']);
-//         }
+        if ($store->getId()) {
+            $fieldset->addField('id', 'hidden', ['name' => 'id']);
+        }
         
         $fieldset->addField(
                 'name',
                 'text',
-                ['name' => 'Name', 'label' => __('Store Name'), 'title' => __('Store Name'), 'required' => true]
+                ['name' => 'name', 'label' => __('Store Name'), 'title' => __('Store Name'), 'required' => true]
                 );
         
         
-        $fieldset->addField(
-                'is_active',
-                'select',
-                [
-                        'label' => __('Status'),
-                        'title' => __('Status'),
-                        'name' => 'is_active',
-                        'required' => true,
-                        'options' => ['1' => __('Enabled'), '0' => __('Disabled')]
-                ]
-                );
-//         if (!$model->getId()) {
-//             $model->setData('is_active', '1');
-//         }
+        if (!$store->getId()) {
+            $store->setData('is_active', '1');
+        }
         
         $fieldset->addField(
                 'description',
@@ -63,8 +52,21 @@ class Form extends Generic
                         'required' => true
                 ]
                 );
+        $fieldset->addField(
+                'is_active',
+                'select',
+                [
+                        'label' => __('Status'),
+                        'title' => __('Status'),
+                        'name' => 'is_active',
+                        'required' => true,
+                        'options' => ['1' => __('Enabled'), '0' => __('Disabled')]
+                ]
+        );
         
-        $form->setValues($store->getData());
+        if ($store){
+            $form->setValues($store->getData());
+        }
         $form->setUseContainer(true);
         $this->setForm($form);
         

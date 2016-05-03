@@ -22,11 +22,11 @@ class Edit extends Action
     public function execute()
     {
         $storeId = $this->getRequest()->getParam("id");
+        $store = $this->storeFactory->create();
         if( $storeId ){
-            $store = $this->storeFactory->create();
             $store->load($storeId);
-            $this->coreRegistry->register("edit_store", $store);
         }
+        $this->coreRegistry->register("edit_store", $store);
         $result = $this->resultPageFactory->create();
         return $result;
     }

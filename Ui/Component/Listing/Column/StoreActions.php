@@ -9,8 +9,8 @@ use Magento\Framework\UrlInterface;
 class StoreActions extends Column
 {
     /** Url path */
-    const BLOG_URL_PATH_EDIT = 'storelisting/store/edit';
-    const BLOG_URL_PATH_DELETE = 'storelisting/store/delete';
+    const STORE_URL_PATH_EDIT = 'storelisting/store/edit';
+    const STORE_URL_PATH_DELETE = 'storelisting/store/delete';
 
     /** @var UrlInterface */
     protected $urlBuilder;
@@ -34,7 +34,7 @@ class StoreActions extends Column
         UrlInterface $urlBuilder,
         array $components = [],
         array $data = [],
-        $editUrl = self::BLOG_URL_PATH_EDIT
+        $editUrl = self::STORE_URL_PATH_EDIT
     ) {
         $this->urlBuilder = $urlBuilder;
         $this->editUrl = $editUrl;
@@ -58,11 +58,11 @@ class StoreActions extends Column
                         'label' => __('Edit')
                     ];
                     $item[$name]['delete'] = [
-                        'href' => $this->urlBuilder->getUrl(self::BLOG_URL_PATH_DELETE, ['id' => $item['id']]),
+                        'href' => $this->urlBuilder->getUrl(self::STORE_URL_PATH_DELETE, ['id' => $item['id']]),
                         'label' => __('Delete'),
                         'confirm' => [
-                            'title' => __('Delete "${ $.$data.title }"'),
-                            'message' => __('Are you sure you wan\'t to delete a "${ $.$data.title }" record?')
+                            'title' => __('Delete "${ $.$data.name }"'),
+                            'message' => __('Are you sure you wan\'t to delete a "${ $.$data.name }" record?')
                         ]
                     ];
                 }

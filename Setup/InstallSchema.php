@@ -65,6 +65,12 @@ class InstallSchema implements InstallSchemaInterface
                         65556,
                         [],
                         "Store Images"
+                )
+                ->addColumn("is_active",
+                        \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
+                        12,
+                        [],
+                        "Is Active"
                 );
         $setup->getConnection()->createTable($table);
         $setup->endSetup();
